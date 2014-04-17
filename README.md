@@ -47,33 +47,33 @@ You can verify the zip output files by several other existing tools(WinRAR, Info
 Currently the zip tool will override the existing zip file specified in the argument.
 
 ####Here are some example:####
-1. compress the single file:
+ * 1. compress the single file:
 ```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip x.zip a.txt
 adding: a.txt
 Task Complete.
 ```
-2. compress the file list:
+ * 2. compress the file list:
 ```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip x.zip a.txt b.txt
 adding: a.txt
 adding: b.txt
 Task Complete.
 ```
-3. compress the directory(not recursively):
+ * 3. compress the directory(not recursively):
 ```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip x.zip folder1
 adding: folder1/
 Task Complete.
 ```
-4. compress the directory(recursively):
+ * 4. compress the directory(recursively):
 ```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip -r x.zip folder1
 adding: folder1\c.txt
 adding: folder1\folder2\d.txt
 Task Complete.
 ```
-5. compress the files specified by wildcard * :
+ * 5. compress the files specified by wildcard * :
 ```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip -r x.zip *.txt *.xml
 adding: a.txt
