@@ -1,0 +1,69 @@
+Apache Commons logo Commons CLI
+Apache Commons CLI ?Last Published: 20 February 2014|Version: 1.3-SNAPSHOT
+ApacheCon
+Apache
+Commons
+COMMONS CLI
+Overview
+Download
+Changes Report
+Mailing Lists
+Issue Tracking
+Source Repository
+USER GUIDE
+Getting started
+Usage scenarios
+Option properties
+Javadoc (Current 1.3-SNAPSHOT)
+Javadoc (1.2)
+PROJECT DOCUMENTATION
+Project Information
+Project Reports
+COMMONS
+Home
+License
+Components
+Sandbox
+Dormant
+GENERAL INFORMATION
+Volunteering
+Contributing Patches
+Building Components
+Releasing Components
+Wiki
+ASF
+How the ASF works
+Get Involved
+Developer Resources
+Sponsorship
+Thanks
+ApacheCon
+Maven	
+Introduction
+There are three stages to command line processing. They are the definition, parsing and interrogation stages. The following sections will discuss each of these stages in turn, and discuss how to implement them with CLI.
+
+Definition Stage
+Each command line must define the set of options that will be used to define the interface to the application.
+
+CLI uses the Options class, as a container for Option instances. There are two ways to create Options in CLI. One of them is via the constructors, the other way is via the factory methods defined in Options.
+
+The Usage Scenarios document provides examples how to create an Options object and also provides some real world examples.
+
+The result of the definition stage is an Options instance.
+
+Parsing Stage
+The parsing stage is where the text passed into the application via the command line is processed. The text is processed according to the rules defined by the parser implementation.
+
+The parse method defined on CommandLineParser takes an Options instance and a String[] of arguments and returns a CommandLine.
+
+The result of the parsing stage is a CommandLine instance.
+
+Interrogation Stage
+The interrogation stage is where the application queries the CommandLine to decide what execution branch to take depending on boolean options and uses the option values to provide the application data.
+
+This stage is implemented in the user code. The accessor methods on CommandLine provide the interrogation capability to the user code.
+
+The result of the interrogation stage is that the user code is fully informed of all the text that was supplied on the command line and processed according to the parser and Options rules.
+
+Copyright ? 2002-2014 The Apache Software Foundation. All Rights Reserved.
+Apache Commons, Apache Commons CLI, Apache, the Apache feather logo, and the Apache Commons project logos are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.
