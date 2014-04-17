@@ -22,7 +22,7 @@ Seems I do not do well on the design patters here. Maybe the below design patter
 Instruction to launch and execute:
 --
 Clone the project into local workspace:
-```sh
+```bat
 git.exe clone --progress -v "https://github.com/zd987/Zip-Demo" "E:\2014apr\workspace\Zip-Demo"
 ```
 You should correctly set up Java and Maven envrionment. (Make sure the JAVA_HOME\bin and MAVEN_HOME\bin are in your system PATH environment variable.)
@@ -30,11 +30,11 @@ You should correctly set up Java and Maven envrionment. (Make sure the JAVA_HOME
 Suppose the project folder is: E:\2014apr\workspace\zip
 
 ####build the project:####
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> mvn clean install
 ```
 You can run the windows batch file to launch the tool: (default to print the help)
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip
 usage: zip [-options] [zipfile [file ...]]
  -help   print this message
@@ -48,33 +48,33 @@ Currently the zip tool will override the existing zip file specified in the argu
 
 ####Here are some example:####
 1. compress the single file:
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip x.zip a.txt
 adding: a.txt
 Task Complete.
 ```
 2. compress the file list:
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip x.zip a.txt b.txt
 adding: a.txt
 adding: b.txt
 Task Complete.
 ```
 3. compress the directory(not recursively):
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip x.zip folder1
 adding: folder1/
 Task Complete.
 ```
 4. compress the directory(recursively):
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip -r x.zip folder1
 adding: folder1\c.txt
 adding: folder1\folder2\d.txt
 Task Complete.
 ```
 5. compress the files specified by wildcard * :
-```sh
+```bat
 E:\2014apr\workspace\Zip-Demo> target\appassembler\bin\zip -r x.zip *.txt *.xml
 adding: a.txt
 adding: b.txt
